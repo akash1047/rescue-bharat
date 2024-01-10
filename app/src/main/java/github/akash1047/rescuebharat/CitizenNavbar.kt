@@ -17,6 +17,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import github.akash1047.rescuebharat.models.screens.CitizenScreens
 
 
 private data class Item(
@@ -26,9 +27,9 @@ private data class Item(
 )
 
 private val items = arrayOf(
-    Item("Guide", Icons.Outlined.LocalLibrary, guideScreen),
-    Item("Report", Icons.Filled.Campaign, reportScreen),
-    Item("Profile", Icons.Outlined.AccountCircle, profileScreen),
+    Item("Guide", Icons.Outlined.LocalLibrary, CitizenScreens.GuideScreen.name),
+    Item("Report", Icons.Filled.Campaign, CitizenScreens.ReportScreen.name),
+    Item("Profile", Icons.Outlined.AccountCircle, CitizenScreens.ProfileScreen.name),
 )
 
 @Composable
