@@ -1,7 +1,7 @@
 package github.akash1047.rescuebharat
 
 import android.app.Activity
-import android.provider.CalendarContract.Instances
+import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,6 +29,7 @@ import github.akash1047.rescuebharat.ui.theme.RescueBharatTheme
 fun UserSelection() {
     currentActivity = LocalContext.current as Activity
 //    val current = LocalContext.current as Activity
+    val context = LocalContext.current
 
     RescueBharatTheme {
         Surface(
@@ -57,7 +58,7 @@ fun UserSelection() {
                 }
 
                 FilledTonalButton(modifier = Modifier.fillMaxWidth(0.6f), onClick = {
-                    currentActivity.finish()
+                    context.startActivity(Intent(context, CitizenActivity::class.java))
                 }) {
                     Row {
                         Icon(

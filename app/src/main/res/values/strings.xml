@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rescue Bharat</string>
+    <string name="title_activity_citizen">CitizenActivity</string>
 </resources>

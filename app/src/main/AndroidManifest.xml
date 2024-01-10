@@ -13,6 +13,11 @@
         android:theme="@style/Theme.RescueBharat"
         tools:targetApi="31">
         <activity
+            android:name=".CitizenActivity"
+            android:exported="false"
+            android:label="@string/title_activity_citizen"
+            android:theme="@style/Theme.RescueBharat" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
