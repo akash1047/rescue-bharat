@@ -1,4 +1,5 @@
-package github.akash1047.rescuebharat
+package github.akash1047.rescuebharat.models.screens
+
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,14 +10,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun CitizenGuide() {
+fun ReportScreen() {
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "Citizen guide screen")
+        Text(text = "Citizen report screen")
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun CitizenReportPreview() {
-    CitizenGuide()
+private fun ReportScreenPreview() {
+    ReportScreen()
 }

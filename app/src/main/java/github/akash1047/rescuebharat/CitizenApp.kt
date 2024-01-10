@@ -11,6 +11,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import github.akash1047.rescuebharat.models.screens.CitizenScreens
+import github.akash1047.rescuebharat.models.screens.GuideScreen
+import github.akash1047.rescuebharat.models.screens.ProfileScreen
+import github.akash1047.rescuebharat.models.screens.ReportScreen
 import github.akash1047.rescuebharat.ui.theme.RescueBharatTheme
 
 @Composable
@@ -25,10 +29,14 @@ fun CitizenApp() {
             Scaffold(
                 bottomBar = { CitizenNavbar(navController) }
             ) { innerPadding ->
-                NavHost(navController, reportScreen, modifier = Modifier.padding(innerPadding)) {
-                    composable(profileScreen) { CitizenProfile() }
-                    composable(reportScreen) { CitizenReport() }
-                    composable(guideScreen) { CitizenGuide() }
+                NavHost(
+                    navController,
+                    CitizenScreens.ReportScreen.name,
+                    modifier = Modifier.padding(innerPadding)
+                ) {
+                    composable(CitizenScreens.ProfileScreen.name) { ProfileScreen() }
+                    composable(CitizenScreens.ReportScreen.name) { ReportScreen() }
+                    composable(CitizenScreens.GuideScreen.name) { GuideScreen() }
                 }
             }
         }
