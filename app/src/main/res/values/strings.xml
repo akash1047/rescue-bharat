@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Rescue Bharat</string>
     <string name="title_activity_citizen">CitizenActivity</string>
+    <string name="place_holder_email">Enter Email</string>
+    <string name="place_holder_password">Enter Password</string>
+    <string name="label_sign_in">SignIn</string>
+    <string name="label_sign_up">SignUp</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_delete_account">DeleteAccount</string>
+    <string name="discription_sign_up">Register You Account</string>
+    <string name="place_holder_confirm_password">Re-enter Your Password</string>
+    <string name="label_login_as_administrator">Login as Administrator</string>
 </resources>

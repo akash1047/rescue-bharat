@@ -6,6 +6,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import github.akash1047.rescuebharat.ui.theme.RescueBharatTheme
 
 class CitizenActivity : ComponentActivity() {
@@ -22,4 +24,11 @@ class CitizenActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun Test(){
+   RescueBharatTheme {
+   }
 }
