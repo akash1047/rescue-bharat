@@ -7,7 +7,7 @@ import androidx.activity.compose.setContent
 
 lateinit var currentActivity: Activity
 
-class MainActivity : ComponentActivity() {
+class CitizenMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
