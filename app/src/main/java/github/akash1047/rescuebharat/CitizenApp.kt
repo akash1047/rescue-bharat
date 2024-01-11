@@ -29,7 +29,7 @@ import github.akash1047.rescuebharat.citizen.START_SCREEN
 import github.akash1047.rescuebharat.models.screens.CitizenScreens
 import github.akash1047.rescuebharat.models.screens.GuideScreen
 import github.akash1047.rescuebharat.models.screens.ProfileScreen
-import github.akash1047.rescuebharat.models.screens.ReportScreen
+import github.akash1047.rescuebharat.citizen.screens.ReportScreen
 
 @Composable
 fun CitizenApp(widthSizeClass: WindowWidthSizeClass) {
