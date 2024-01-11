@@ -139,7 +139,7 @@ fun SignInScreen(
         )
 
         TextButton(onClick = { viewModel.onSignUpClick(openAndPopUp) }) {
-            Text(text = stringResource(R.string.discription_sign_up), fontSize = 16.sp)
+            Text(text = stringResource(R.string.description_sign_up), fontSize = 16.sp)
         }
     }
 }
