@@ -11,14 +11,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.movableContentOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import github.akash1047.rescuebharat.citizen.BottomBarLayout
 import github.akash1047.rescuebharat.citizen.GUIDE_SCREEN
@@ -45,9 +44,8 @@ fun CitizenApp(widthSizeClass: WindowWidthSizeClass) {
         color = MaterialTheme.colorScheme.surface,
     ) {
         val navController = rememberNavController()
-        val destination by remember {
-            mutableStateOf(navController.currentDestination)
-        }
+        val navBackStackEntry =  navController.currentBackStackEntryAsState().value
+        val currentDestination = navBackStackEntry?.destination
 
         val navHost = remember {
             movableContentOf<PaddingValues> { innerPadding ->
@@ -62,7 +60,7 @@ fun CitizenApp(widthSizeClass: WindowWidthSizeClass) {
         when (widthSizeClass) {
             WindowWidthSizeClass.Compact -> {
                 BottomBarLayout(items = navItems,
-                    destination = destination,
+                    destination = currentDestination,
                     onMenuItemSelected = { route ->
 
                         navController.navigate(route) {
@@ -79,7 +77,7 @@ fun CitizenApp(widthSizeClass: WindowWidthSizeClass) {
 
             else -> {
                 NavigationRailLayout(items = navItems,
-                    destination = destination,
+                    destination = currentDestination,
                     onMenuItemSelected = { route ->
                         navController.navigate(route) {
                             popUpTo(navController.graph.findStartDestination().id) {
